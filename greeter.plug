@@ -1,0 +1,9 @@
+[Core] 
+Name = Greeter  
+Module = greeter 
+ 
+[Documentation] 
+Description = Greeter plugin 
+ 
+[Python] 
+Version = 3
