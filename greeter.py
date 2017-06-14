@@ -13,10 +13,10 @@ class Greeter(BotPlugin):
     def callback_message(self, message):
         channel = "%s" % message.frm
         is_new_user = False
-        logging.info(channel.split("/"))
-        if channel.split("/")[0]== "#general":
+        logging.info("Checking if user is new... (joined #general channel)")
+        if channel.split("/")[0]== "#general" and message.body.find('joined'):
             is_new_user = True
-        if is_new_user and message.body.find('joined') != -1:
+        if is_new_user:
             self.send(
                 self.build_identifier('#general'),
                 """@%s, bem vindo ao Slack da FL! Algumas dicas para você:\n 
